@@ -11,11 +11,9 @@ export class AuthGuard implements CanActivate{
     
     canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot){
         if(this.auth.authenticated()){
-            console.log('AUTH GUARD PASSED');
             return true;
         } else {
-            console.log('BLOCKED BY AUTH GUARD');
-            this.router.navigate(['/']);
+           this.router.navigate(['/']);
             
             return false;
         }

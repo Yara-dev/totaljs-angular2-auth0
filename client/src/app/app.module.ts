@@ -1,5 +1,4 @@
 import './rxjs-operators';
-
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -22,9 +21,7 @@ import {AuthGuard} from './auth.guard';
         BrowserModule,
         FormsModule,
         HttpModule,
-      
         routing
-      
     ],
     declarations: [
         AppComponent,

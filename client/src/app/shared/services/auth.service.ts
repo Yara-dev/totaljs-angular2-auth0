@@ -18,15 +18,10 @@ export class Auth {
                 if(error){
                     throw new Error(error);
                 }
-                // Set Profile
                 localStorage.setItem('profile', JSON.stringify(profile));
-                // Set Token
                 localStorage.setItem('id_token', authResult.idToken);
              
              localStorage.setItem('access_token', authResult.access_token);
-              console.log('1 ',authResult.idToken);
-             
-              
         })
         });
     }
@@ -35,24 +30,19 @@ export class Auth {
     {
          let token = localStorage.getItem('id_token');
 
-         console.log('token=',token);
-      //    console.log('access_token=',localStorage.getItem('access_token'));
-        
-        return token;
+          return token;
     }
 
   public getNickname()
    {
         
         const profile = JSON.parse(localStorage.getItem('profile'));
-    // console.log('profile=',profile);
-         return (profile)? profile.nickname : null;
+        return (profile)? profile.nickname : null;
        
    } 
    
     public login() {
-        // Call the show method to display the widget.
-        this.lock.show();
+         this.lock.show();
     };
     
     public authenticated(){
@@ -60,7 +50,6 @@ export class Auth {
     }
     
     public logout() {
-        // Remove info from localStorage
         localStorage.removeItem('id_token');
         localStorage.removeItem('profile');
     };
