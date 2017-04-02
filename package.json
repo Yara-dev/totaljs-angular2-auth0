@@ -1,0 +1,19 @@
+{
+  "name": "totaljs-angular2-auth0",
+  "version": "1.0.0",
+  "author": "Greg Kroczek",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "deploy": "cp -R ./client/dist/ ./public/",
+    "start": "node server"
+  },
+  "dependencies": {
+    "@types/jsonwebtoken": "^7.2.0",
+    "dotenv": "^4.0.0",
+    "jsonwebtoken": "^7.3.0",
+    "lodash": "^4.17.4",
+    "path": "^0.12.7",
+    "total.js": "^2.4.0"
+  }
+}
